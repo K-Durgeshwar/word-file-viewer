@@ -39,6 +39,7 @@ app.get('/view-document', (req, res) => {
 // Function to send the PDF response
 function sendPdfResponse(res) {
   res.send(`
+    <h2>PDF Document:</h2>
     <iframe src="/uploads/${pdfFilePath.split(path.sep).pop()}" width="100%" height="600px"></iframe>
     <br>
     <a href="/">Go Back</a>
